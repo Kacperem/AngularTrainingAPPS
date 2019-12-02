@@ -13,7 +13,7 @@ export class AppComponent {
   mydog = new MyDog('Berna', 5);
 
   showMyDog() {
-    return 'My Dog is' + this.mydog.name + 'and she is ' + this.mydog.age + ' years old';
+    return 'My Dog is ' + this.mydog.name + ' and she is ' + this.mydog.age + ' years old';
   }
 
 

@@ -1,12 +1,12 @@
 <p>
-  Welcome in {{title}}<br>
-  pi: {{pi}}<br>
-  Today is: {{date}}<br>
+  Welcome in {{title | uppercase}}<br>
+  pi: {{pi | number: '1.1-2'}}<br>
+  Today is: {{date | date: 'dd-MM-yy'}}<br>
   My Dog is: {{mydog.name}}<br>
   The dog is {{mydog.age}} years old<br>
 </p>
 
-{{showMyDog()}}
+{{showMyDog() | lowercase}}
 <br>
 <br>
 Math:<br>
