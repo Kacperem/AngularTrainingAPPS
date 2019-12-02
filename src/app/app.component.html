@@ -2,16 +2,7 @@
   Welcome in {{title | uppercase}}<br>
   pi: {{pi | number: '1.1-2'}}<br>
   Today is: {{date | date: 'dd-MM-yy'}}<br>
-  My Dog is: {{mydog.name}}<br>
-  The dog is {{mydog.age}} years old<br>
+  My Dog is: {{mydog && mydog?.name}}<br>
+  The dog is {{mydog?.age}} years old<br>
 </p>
-
-{{showMyDog() | lowercase}}
-<br>
-<br>
-Math:<br>
-{{2+2}}
-<br>
-{{2+2*2}}
-
 
