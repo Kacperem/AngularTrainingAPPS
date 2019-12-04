@@ -2,19 +2,14 @@
 
 <p>Days of the week:</p>
 
-
-<ul>
-  <ng-container *ngFor="let day of days; let e = even">
-    <li *ngIf="e">
-      {{day}}
-    </li>
-  </ng-container>
-</ul>
-
-<div *ngFor="let myDog of myDogs">
-  <div *ngIf="myDog.age > 5" >
-      My dog name is  {{myDog.name}}, is {{myDog.age}} years old.
+<div *ngFor="let day of days">
+  <div [ngSwitch]="day">
+<div *ngSwitchCase="'Monday'">Poniedziałek</div>
+<div *ngSwitchCase="'Tuesday'">Wtorek</div>
+<div *ngSwitchCase="'Wednesday'">Środa</div>
+<div *ngSwitchCase="'Thursday'">Czwartek</div>
+<div *ngSwitchCase="'Friday'">Piątek</div>
+<div *ngSwitchCase="'Saturday'">Sobota</div>
+<div *ngSwitchDefault>Niedziela</div>
   </div>
 </div>
-
-<app-new *ngFor="let i of [1, 2, 3, 4]"></app-new>
