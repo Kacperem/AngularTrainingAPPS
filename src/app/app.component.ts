@@ -6,13 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'MyTest';
-  pi = Math.PI;
-  date = new Date();
 
-  mydog: MyDog;
+  title = 'MyDays';
 
+  days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
+myDogs = new Array<MyDog>();
+
+constructor(){
+  this.myDogs.push(new MyDog('Berna', 5), new MyDog('Hugo', 8), new MyDog('Berni', 4));
+}
 
 
 }
