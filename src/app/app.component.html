@@ -9,8 +9,9 @@
 </ul>
 
 <ul>
-  <li *ngFor="let myDog of myDogs">
-      My dog name is  {{myDog.name}}, is {{myDog.age}} years old.
+  <li *ngFor="let myDog of myDogs; let i = index">
+   {{i + 1}}   My dog name is  {{myDog.name}}, is {{myDog.age}} years old.
   </li>
 </ul>
 
+<app-new *ngFor="let i of [1, 2, 3, 4]"></app-new>
