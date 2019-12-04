@@ -1,15 +1,19 @@
 <h3> Welcome in {{title | uppercase}}</h3>
 
-<p>Days of the week:</p>
+<p>Days of the week: using ngIF</p>
 
-<div *ngFor="let day of days">
-  <div [ngSwitch]="day">
-<div *ngSwitchCase="'Monday'">Poniedziałek</div>
-<div *ngSwitchCase="'Tuesday'">Wtorek</div>
-<div *ngSwitchCase="'Wednesday'">Środa</div>
-<div *ngSwitchCase="'Thursday'">Czwartek</div>
-<div *ngSwitchCase="'Friday'">Piątek</div>
-<div *ngSwitchCase="'Saturday'">Sobota</div>
-<div *ngSwitchDefault>Niedziela</div>
+<ng-container *ngIf="isVisible">
+  <div *ngFor="let day of days">
+    <div>{{day}}</div>
   </div>
-</div>
+</ng-container>
+<button (click)="show()">NgIf</button>
+
+<br>
+<p>Days of the week: using Hidden</p>
+<div [hidden]="isHidden">
+  <div *ngFor="let day of days">
+    <div>{{day}}
+    </div>
+  </div>
+  <button (click)="hidden()">Hidden</button>

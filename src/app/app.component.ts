@@ -11,17 +11,18 @@ export class AppComponent {
 
   days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-myDogs = new Array<MyDog>();
+isVisible = true;
+isHidden = false;
 
-constructor(){
-  this.myDogs.push(new MyDog('Berna', 5), new MyDog('Hugo', 8), new MyDog('Berni', 4));
+show() {
+  this.isVisible = !this.isVisible;
+}
+
+hidden() {
+  this.isHidden = !this.isHidden;
 }
 
 
 }
 
-class MyDog {
-  constructor(public name: string, public age: number) {
 
-  }
-}
