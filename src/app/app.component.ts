@@ -9,30 +9,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  inputText = 'Text';
-  maxLengt = 5;
-  colorClass = 'color';
-  logoUrl = '';
-
-  isDisable = true;
+  profession = 'Programist';
+  skill = 'Angular';
 
   constructor() {
   }
 
-  onFocus() {
-    this.colorClass = 'color2';
+  saveP(event) {
+    this.profession = event.target.value;
   }
-  onClick($event) {
-    console.log(event);
-  }
-  onMouseMove($event) {
-    //console.log('x: ' + event.clientX = ', y: ' + event.clientY);
-  }
-  onPaste() {
-    this.inputText = 'dont paste, just write!';
-  }
-  change() {
-    this.isDisable = false;
+
+  saveS(event) {
+    this.skill = event.target.value;
   }
 
 
