@@ -1,19 +1,16 @@
-<h3> Welcome in {{title | uppercase}}</h3>
+<h3> Angular - property binding</h3>
+<div>
+  <input [value]="inputText">
+</div>
 
-<p>Days of the week: using ngIF</p>
+<div>
+  <input [(ngModel)]="inputText2Way">
+  {{inputText2Way}}
+</div>
 
-<ng-container *ngIf="isVisible">
-  <div *ngFor="let day of days">
-    <div>{{day}}</div>
-  </div>
-</ng-container>
-<button (click)="show()">NgIf</button>
+<div>
+  <input (click)="click($event)">
+  <button [disabled]="button">Add</button>
+  {{showClick}}
+</div>
 
-<br>
-<p>Days of the week: using Hidden</p>
-<div [hidden]="isHidden">
-  <div *ngFor="let day of days">
-    <div>{{day}}
-    </div>
-  </div>
-  <button (click)="hidden()">Hidden</button>

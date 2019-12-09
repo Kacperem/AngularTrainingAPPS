@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,22 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  title = 'MyDays';
+  inputText = 'Text';
+  inputText2Way = '';
+  button = true;
+  showClick = '';
 
-  days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-
-isVisible = true;
-isHidden = false;
-
-show() {
-  this.isVisible = !this.isVisible;
-}
-
-hidden() {
-  this.isHidden = !this.isHidden;
-}
-
-
+  click(event) {
+    this.showClick = 'button active!';
+    this.button = false;
+  }
 }
 
 
