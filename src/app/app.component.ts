@@ -17,15 +17,23 @@ export class AppComponent {
   isDisable = true;
 
   constructor() {
-    setTimeout(() => {
-      this.isDisable = false;
-    }, 3000);
   }
 
-  change() {
-    this.inputText = 'change text and color';
-    this.maxLengt = 10;
+  onFocus() {
     this.colorClass = 'color2';
-    this.logoUrl = 'https://angular.io/assets/images/logos/angular/angular.png';
   }
+  onClick($event) {
+    console.log(event);
+  }
+  onMouseMove($event) {
+    //console.log('x: ' + event.clientX = ', y: ' + event.clientY);
+  }
+  onPaste() {
+    this.inputText = 'dont paste, just write!';
+  }
+  change() {
+    this.isDisable = false;
+  }
+
+
 }

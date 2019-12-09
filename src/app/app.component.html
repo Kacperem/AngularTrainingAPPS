@@ -1,6 +1,11 @@
 <h3 [className]="colorClass"> Angular - property binding</h3>
-<img [src]='logoUrl'>
-<input [maxLength]="maxLengt" [value]="inputText">
 
-<button [disabled]="isDisable" (click)="change()">Add</button>
-
+<input [disabled]="isDisable" (focus)="onFocus()">
+<br>
+<input [disabled]="isDisable" (click)="onClick($event)">
+<br>
+<input [disabled]="isDisable" (mousemove)="onMouseMove($event)">
+<br>
+<input [disabled]="isDisable" (paste)="onPaste()">{{inputText}}
+<br>
+<button (click)="change()">Change</button>
