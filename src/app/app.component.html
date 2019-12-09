@@ -1,16 +1,6 @@
-<h3> Angular - property binding</h3>
-<div>
-  <input [value]="inputText">
-</div>
+<h3 [className]="colorClass"> Angular - property binding</h3>
+<img [src]='logoUrl'>
+<input [maxLength]="maxLengt" [value]="inputText">
 
-<div>
-  <input [(ngModel)]="inputText2Way">
-  {{inputText2Way}}
-</div>
-
-<div>
-  <input (click)="click($event)">
-  <button [disabled]="button">Add</button>
-  {{showClick}}
-</div>
+<button [disabled]="isDisable" (click)="change()">Add</button>
 

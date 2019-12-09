@@ -10,14 +10,22 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   inputText = 'Text';
-  inputText2Way = '';
-  button = true;
-  showClick = '';
+  maxLengt = 5;
+  colorClass = 'color';
+  logoUrl = '';
 
-  click(event) {
-    this.showClick = 'button active!';
-    this.button = false;
+  isDisable = true;
+
+  constructor() {
+    setTimeout(() => {
+      this.isDisable = false;
+    }, 3000);
+  }
+
+  change() {
+    this.inputText = 'change text and color';
+    this.maxLengt = 10;
+    this.colorClass = 'color2';
+    this.logoUrl = 'https://angular.io/assets/images/logos/angular/angular.png';
   }
 }
-
-
