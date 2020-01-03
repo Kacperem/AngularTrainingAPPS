@@ -11,4 +11,8 @@ export class AppComponent {
 
 tasksList = ['Cooking', 'Cleaning', 'Learning'];
 
+selected(task: string): void{
+  console.log(task);
+}
+
 }
