@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class ChildComponent implements OnInit {
 
   @Input()
-  tasks ;
+  tasks;
 
   @Output()
   eventTask = new EventEmitter<string>();
@@ -18,7 +18,7 @@ export class ChildComponent implements OnInit {
   ngOnInit() {
   }
 
-  select(task){
+  select(task) {
     this.eventTask.emit(task);
   }
 

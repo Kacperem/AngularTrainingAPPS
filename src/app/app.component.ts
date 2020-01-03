@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { ChildComponent } from './child/child.component';
 
 
 
@@ -9,10 +10,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-tasksList = ['Cooking', 'Cleaning', 'Learning'];
+  tasksList = ['Cooking', 'Cleaning', 'Learning'];
 
-selected(task: string): void{
-  console.log(task);
-}
+  @ViewChild('childRef')
+  childComponent: ChildComponent;
+
+  @ViewChild('inputText')
+  input: ElementRef;
+
+  selected(task: string): void {
+    console.log(task);
+  }
+
+  add(input: HTMLInputElement) {
+    this.tasksList.push(input.value);
+    //this.childComponent.tasks = [];
+    //this.input.nativeElement.value = '';
+  }
 
 }
