@@ -1,3 +1,8 @@
-<input #inputText>
-<button (click)="add(inputText)">Add</button>
-<app-child #childRef [tasks]="tasksList" (eventTask)="selected($)"></app-child>
+<app-child>
+  <h1>Sending some html code</h1>
+  <ul>
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ul>
+</app-child>

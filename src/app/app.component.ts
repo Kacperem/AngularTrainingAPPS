@@ -12,11 +12,6 @@ export class AppComponent {
 
   tasksList = ['Cooking', 'Cleaning', 'Learning'];
 
-  @ViewChild('childRef')
-  childComponent: ChildComponent;
-
-  @ViewChild('inputText')
-  input: ElementRef;
 
   selected(task: string): void {
     console.log(task);
