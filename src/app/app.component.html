@@ -1,8 +1,8 @@
-<app-child>
-  <h1>Sending some html code</h1>
-  <ul>
-    <li>First</li>
-    <li>Second</li>
-    <li>Third</li>
-  </ul>
-</app-child>
+<div *ngIf="show">
+  <app-child [inputText]="title" [inputDog]="dog">
+    Sending next content</app-child>
+</div>
+<button (click)="changeTitle()">Change title</button>
+<button (click)="changeDog()">Change dog</button>
+<button (click)="nothing()">Nothing</button>
+<button (click)="destroy()">Delete component</button>

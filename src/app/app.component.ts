@@ -10,17 +10,32 @@ import { ChildComponent } from './child/child.component';
 })
 export class AppComponent {
 
-  tasksList = ['Cooking', 'Cleaning', 'Learning'];
+  title = 'Learning Angular';
+  dog = new Dog('Berna');
+  show = true;
 
 
-  selected(task: string): void {
-    console.log(task);
+  changeTitle(){
+    this.title = 'Angular is awesome!';
   }
 
-  add(input: HTMLInputElement) {
-    this.tasksList.push(input.value);
-    //this.childComponent.tasks = [];
-    //this.input.nativeElement.value = '';
+  changeDog(){
+    //this.dog.name = 'Hugo';
+    this.dog = new Dog('Kevin');
+  }
+
+  nothing(){
+
+  }
+
+  destroy(){
+    this.show = !this.title;
+  }
+}
+
+export class Dog {
+  constructor(public name: string) {
+
   }
 
 }
