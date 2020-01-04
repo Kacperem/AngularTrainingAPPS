@@ -1,9 +1,10 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-todo-task',
   templateUrl: './todo-task.component.html',
-  styleUrls: ['./todo-task.component.css']
+  styleUrls: ['./todo-task.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class TodoTaskComponent implements OnInit {
 
