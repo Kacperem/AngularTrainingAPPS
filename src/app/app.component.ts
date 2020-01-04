@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 
 
 
@@ -8,10 +8,14 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   tasksList: Array<string> = [];
   tasksDone: Array<string> = [];
+
+  ngOnInit() {
+    this.tasksList = ['Cooking', 'Learning Angular', 'Cleaning', 'Jogging'];
+  }
 
   add(task: string) {
     this.tasksList.push(task);

@@ -29,4 +29,8 @@ export class TodoTaskComponent implements OnInit {
     this.emitDone.emit(task);
   }
 
+  getColor(): string {
+    return this.tasksList.length >= 4 ? 'red' : 'green';
+  }
+
 }
