@@ -4,7 +4,6 @@ import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation } fro
   selector: 'app-todo-task',
   templateUrl: './todo-task.component.html',
   styleUrls: ['./todo-task.component.css'],
-  encapsulation: ViewEncapsulation.None
 })
 export class TodoTaskComponent implements OnInit {
 
