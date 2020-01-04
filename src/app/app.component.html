@@ -1,8 +1,17 @@
-<div *ngIf="show">
-  <app-child [inputText]="title" [inputDog]="dog">
-    Sending next content</app-child>
+<div>
+  <div class="container">
+    <app-add-task (emitTask)="add($event)"></app-add-task>
+  </div>
+
+  <div class="container">
+    <div>
+      <app-todo-task [tasksList]="tasksList" (emitDone)="done($event)" (emitRemove)="remove($event)"></app-todo-task>
+    </div>
+
+    <div>
+      <app-done-task [tasksDone]="tasksDone"></app-done-task>
+    </div>
+
+
+  </div>
 </div>
-<button (click)="changeTitle()">Change title</button>
-<button (click)="changeDog()">Change dog</button>
-<button (click)="nothing()">Nothing</button>
-<button (click)="destroy()">Delete component</button>

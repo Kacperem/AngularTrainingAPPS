@@ -4,16 +4,16 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TestComponent } from './test/test.component';
-import { NewComponent } from './new/new.component';
-import { ChildComponent } from './child/child.component';
+import { AddTaskComponent } from './add-task/add-task.component';
+import { TodoTaskComponent } from './todo-task/todo-task.component';
+import { DoneTaskComponent } from './done-task/done-task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
-    NewComponent,
-    ChildComponent
+    AddTaskComponent,
+    TodoTaskComponent,
+    DoneTaskComponent
   ],
   imports: [
     BrowserModule,

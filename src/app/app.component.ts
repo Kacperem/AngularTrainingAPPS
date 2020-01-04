@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { ChildComponent } from './child/child.component';
+
 
 
 
@@ -10,32 +10,24 @@ import { ChildComponent } from './child/child.component';
 })
 export class AppComponent {
 
-  title = 'Learning Angular';
-  dog = new Dog('Berna');
-  show = true;
+  tasksList: Array<string> = [];
+  tasksDone: Array<string> = [];
 
-
-  changeTitle(){
-    this.title = 'Angular is awesome!';
+  add(task: string) {
+    this.tasksList.push(task);
   }
 
-  changeDog(){
-    //this.dog.name = 'Hugo';
-    this.dog = new Dog('Kevin');
+
+  remove(task: string) {
+    this.tasksList = this.tasksList.filter(e => e !== task);
   }
 
-  nothing(){
 
-  }
 
-  destroy(){
-    this.show = !this.title;
-  }
-}
+  done(task: string) {
 
-export class Dog {
-  constructor(public name: string) {
-
+    this.tasksDone.push(task);
+    this.remove(task);
   }
 
 }
