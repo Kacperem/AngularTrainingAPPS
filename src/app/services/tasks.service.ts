@@ -18,7 +18,7 @@ private tasksDoneObs = new BehaviorSubject<Array<Task>>([]);
       {name: 'Cooking', created: new Date()},
       {name: 'Learning Angular', created: new Date()},
       {name: 'Cleaning', created: new Date()},
-      {name: 'Jogging,', created: new Date()},
+      {name: 'Jogging', created: new Date()},
     ];
     this.tasksListObs.next(this.tasksList);
   }
