@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { TasksService } from '../services/tasks.service';
+import { Task } from '../models/task';
 
 @Component({
   selector: 'app-add-task',
@@ -18,7 +19,8 @@ export class AddTaskComponent implements OnInit {
   }
 
   add() {
-    this.tasksTaskservice.add(this.newTask);
+    const task: Task = ({name: this.newTask, created: new Date()});
+    this.tasksTaskservice.add(task);
     this.newTask = '';
   }
 
