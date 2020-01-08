@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
-
+import { AngularFireDatabase } from '@angular/fire/database';
+import { Observable } from 'rxjs';
 
 
 
@@ -10,6 +11,8 @@ import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 })
 export class AppComponent {
 
+  constructor(public db: AngularFireDatabase) {
+  }
 
 
 }
