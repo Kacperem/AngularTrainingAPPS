@@ -1,3 +1,5 @@
+<div class="container">
+<app-add-task></app-add-task>
 <ng-container *ngIf="tasksList.length > 0; else noTask">
 <p [ngStyle]="{color: getColor()}">Tasks to do: {{tasksList.length}}</p>
   <ul>
@@ -11,3 +13,4 @@
 <ng-template #noTask>
   <p>...no tasks, you have a break!</p>
 </ng-template>
+</div>
