@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { TasksService } from '../services/tasks.service';
 import { Task } from '../models/task';
+import { FormGroup, FormArray, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-add-task',
@@ -9,19 +10,22 @@ import { Task } from '../models/task';
 })
 export class AddTaskComponent implements OnInit {
 
-  newTask: string;
+  addForm: FormGroup;
 
 
   constructor(private tasksTaskservice: TasksService) {
    }
 
   ngOnInit() {
+    this.addForm = new FormGroup({
+      taskName: new FormArray([new FormControl(null)])
+    });
   }
 
   add() {
-    const task: Task = ({name: this.newTask, created: new Date()});
+    const task: Task = ({name: '', created: new Date()});
     this.tasksTaskservice.add(task);
-    this.newTask = '';
+    //this.newTask = '';
   }
 
 }

@@ -1,4 +1,11 @@
-<div class="container">
-  <input [(ngModel)]="newTask">
-  <button (click)="add()">Add</button>
+<div>
+  <form [formGroup]="addForm" (ngSubmit)="add()">
+    <div formArrayName="taskName">
+      <div *ngFor="let task of addForm.get('taskName')['controls']; let i = index">
+        <input type="text" [formControlName]="i">
+      </div>
+    </div>
+    <button type="submit">Add</button>
+  </form>
+
 </div>
