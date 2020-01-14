@@ -23,9 +23,9 @@ private tasksDoneObs = new BehaviorSubject<Array<Task>>([]);
     this.tasksListObs.next(this.tasksList);
   }
 
-  add(task: Task) {
-    this.tasksList.push(task);
-    this.tasksListObs.next(this.tasksList);
+  add(task: Array<Task>) {
+    const list = this.tasksListObs.getValue().concat(task);
+    this.tasksListObs.next(list);
   }
 
 
