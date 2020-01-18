@@ -1,6 +1,7 @@
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { Observable } from 'rxjs';
+import { AuthService } from './auth/auth.service';
+import { Router } from '@angular/router';
 
 
 
@@ -11,8 +12,12 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent {
 
-  constructor(public db: AngularFireDatabase) {
+  constructor(public authService: AuthService, private router: Router, public db: AngularFireDatabase) {
   }
 
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/login']);
+  }
 
 }
